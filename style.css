@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+* {
+    --purple: hsl(259, 100%, 65%);
+    --lred: hsl(0, 100%, 67%);
+    --offwhite: hsl(0, 0%, 94%);
+    --lgrey: hsl(0, 0%, 86%);
+    --sgrey: hsl(0, 1%, 44%);
+    --offblack: hsl(0, 0%, 8%);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    background-color: var(--offwhite);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.label {
+    color: var(--sgrey);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn {
+    background-color: var(--purple) !important;
+}
+
+.i:hover{
+  border-color: var(--purple);
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.num {
+    color: var(--purple);
+}
+
+.error {
+    border-color: var(--lred) Impo !important;
+    color: var(--lred) !important;
+}
+
+.error::placeholder {
+    color: var(--lred);
+}
