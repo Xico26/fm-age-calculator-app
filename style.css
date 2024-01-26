@@ -50,7 +50,7 @@ input[type=number] {
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: black !important;
 }
 
 .num {
