@@ -1,54 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Age calculator app</title>
-</head>
-<body>
-  <main class="min-h-screen flex justify-center md:items-center mt-20 md:mt-0">
-    <div class="w-[90%] md:max-w-[50%] h-1/2 md:h-[70%] md:min-h-[70%] bg-white rounded-2xl rounded-br-[25%] py-6 md:p-6">
-      <div class="flex p-4 pb-0 justify-around">
-        <span class="label w-1/4" id="dayLabel">DAY</span>
-        <span class="label w-1/4" id="monthLabel">MONTH</span>
-        <span class="label w-1/4" id="yearLabel">YEAR</span> 
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main
+      class="md:min-h-screen flex justify-center md:items-center mt-20 md:mt-0">
+      <div
+        class="w-[90%] md:max-w-[50%] bg-white rounded-2xl rounded-br-[25%] py-6 md:p-6">
+        <form action="#" id="form">
+          <div class="flex p-4 pb-0 justify-around md:w-4/5">
+            <label class="label w-1/4" id="dayLabel" for="day">DAY</label>
+            <label class="label w-1/4" id="monthLabel" for="month">MONTH</label>
+            <label class="label w-1/4" id="yearLabel" for="year">YEAR</label>
+          </div>
+          <div class="flex p-4 pt-1 justify-around md:w-4/5">
+            <input
+              class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
+              type="number"
+              name="day"
+              id="day"
+              placeholder="DD" 
+              aria-describedby="dayError"/>
+            <input
+              class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
+              type="number"
+              name="month"
+              id="month"
+              placeholder="MM"
+              aria-describedby="monthError" />
+            <input
+              class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
+              type="number"
+              name="year"
+              id="year"
+              placeholder="YYYY" 
+              aria-describedby="yearError"/>
+          </div>
+          <div class="flex p-4 py-0 justify-around">
+            <span
+              class="error text-xs w-1/4 italic font-thin"
+              id="dayError" aria-live="polite"></span>
+            <span
+              class="error text-xs w-1/4 italic font-thin"
+              id="monthError" aria-live="polite"></span>
+            <span
+              class="error text-xs w-1/4 italic font-thin"
+              id="yearError" aria-live="polite"></span>
+          </div>
+          <div class="flex flex-col mt-12 mx-8">
+            <hr />
+            <button
+              class="h-16 w-16 md:h-20 md:w-20 btn rounded-full self-center md:self-end relative -top-10 text-white text-4xl flex items-center justify-center"
+              id="btn"
+              type="submit">
+              <img src="./assets/images/icon-arrow.svg" alt="Submit" />
+            </button>
+          </div>
+        </form>
+        <div class="p-4 md:p-8">
+          <p class="italic font-bold text-6xl lg:text-8xl">
+            <span class="num" id="yrs">--</span> years
+          </p>
+          <p class="italic font-bold text-6xl lg:text-8xl">
+            <span class="num" id="mts">--</span> months
+          </p>
+          <p class="italic font-bold text-6xl lg:text-8xl">
+            <span class="num" id="dys">--</span> days
+          </p>
+        </div>
       </div>
-      <form action="#" id="form">
-      <div class="flex p-4 pt-1 justify-around">
-          <input class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i" type="number" name="day" id="day" placeholder="DD">
-          <input class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i" type="number" name="month" id="month" placeholder="MM">
-          <input class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i" type="number" name="year" id="year" placeholder="YYYY">
+    </main>
+    <footer class="p-4">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://xico26.github.io" target="_blank">Francisco Maia</a>.
       </div>
-      <div class="flex p-4 py-0 justify-around">
-        <span class="error text-xs w-1/4 italic font-thin" id="dayError"></span>
-        <span class="error text-xs w-1/4 italic font-thin" id="monthError"></span>
-        <span class="error text-xs w-1/4 italic font-thin" id="yearError"></span>
-      </div>
-      <div class="flex flex-col mt-12 mx-8">
-        <hr>
-        <button class="h-16 w-16 btn rounded-full self-center md:self-end relative -top-8 text-white text-4xl flex items-center justify-center" id="btn" type="submit">
-          <img src="./assets/images/icon-arrow.svg" alt="Submit">
-        </button>
-      </div>
-    </form>
-      <div class="p-4">
-        <p class="italic font-bold text-5xl"><span class="num" id="yrs">--</span> years</p>
-        <p class="italic font-bold text-5xl"><span class="num" id="mts">--</span> months</p>
-        <p class="italic font-bold text-5xl"><span class="num" id="dys">--</span> days</p>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://xico26.github.io" target="_blank">Francisco Maia</a>.
-    </div>
-  </footer>
-  
-</body>
-<script src="app.js"></script>
+    </footer>
+  </body>
+  <script src="app.js"></script>
 </html>
