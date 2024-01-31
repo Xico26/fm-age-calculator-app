@@ -20,54 +20,62 @@
       <div
         class="w-[90%] md:max-w-[50%] bg-white rounded-2xl rounded-br-[25%] py-6 md:p-6">
         <form action="#" id="form">
-          <div class="flex p-4 pb-0 justify-around md:w-4/5">
-            <label class="label w-1/4" id="dayLabel" for="day">DAY</label>
-            <label class="label w-1/4" id="monthLabel" for="month">MONTH</label>
-            <label class="label w-1/4" id="yearLabel" for="year">YEAR</label>
-          </div>
-          <div class="flex p-4 pt-1 justify-around md:w-4/5">
-            <input
-              class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
-              type="number"
-              name="day"
-              id="day"
-              placeholder="DD" 
-              aria-describedby="dayError"/>
-            <input
-              class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
-              type="number"
-              name="month"
-              id="month"
-              placeholder="MM"
-              aria-describedby="monthError" />
-            <input
-              class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
-              type="number"
-              name="year"
-              id="year"
-              placeholder="YYYY" 
-              aria-describedby="yearError"/>
-          </div>
-          <div class="flex p-4 py-0 justify-around">
-            <span
-              class="error text-xs w-1/4 italic font-thin"
-              id="dayError" aria-live="polite"></span>
-            <span
-              class="error text-xs w-1/4 italic font-thin"
-              id="monthError" aria-live="polite"></span>
-            <span
-              class="error text-xs w-1/4 italic font-thin"
-              id="yearError" aria-live="polite"></span>
-          </div>
-          <div class="flex flex-col mt-12 mx-8">
-            <hr />
-            <button
-              class="h-16 w-16 md:h-20 md:w-20 btn rounded-full self-center md:self-end relative -top-10 text-white text-4xl flex items-center justify-center"
-              id="btn"
-              type="submit">
-              <img src="./assets/images/icon-arrow.svg" alt="Submit" />
-            </button>
-          </div>
+          <fieldset>
+            <legend class="hidden">Date</legend>
+            <div class="flex p-4 pb-0 justify-around md:w-4/5">
+              <label class="label w-1/4" id="dayLabel" for="day">DAY</label>
+              <label class="label w-1/4" id="monthLabel" for="month"
+                >MONTH</label
+              >
+              <label class="label w-1/4" id="yearLabel" for="year">YEAR</label>
+            </div>
+            <div class="flex p-4 pt-1 justify-around md:w-4/5">
+              <input
+                class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
+                type="number"
+                name="day"
+                id="day"
+                placeholder="DD"
+                aria-describedby="dayError" />
+              <input
+                class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
+                type="number"
+                name="month"
+                id="month"
+                placeholder="MM"
+                aria-describedby="monthError" />
+              <input
+                class="rounded-md border border-gray-300 w-1/4 h-12 p-2 text-xl i"
+                type="number"
+                name="year"
+                id="year"
+                placeholder="YYYY"
+                aria-describedby="yearError" />
+            </div>
+            <div class="flex p-4 py-0 justify-around">
+              <span
+                class="error text-xs w-1/4 italic font-thin"
+                id="dayError"
+                aria-live="polite"></span>
+              <span
+                class="error text-xs w-1/4 italic font-thin"
+                id="monthError"
+                aria-live="polite"></span>
+              <span
+                class="error text-xs w-1/4 italic font-thin"
+                id="yearError"
+                aria-live="polite"></span>
+            </div>
+            <div class="flex flex-col mt-12 mx-8">
+              <hr />
+              <button
+                class="h-16 w-16 md:h-20 md:w-20 btn rounded-full self-center md:self-end relative -top-10 text-white text-4xl flex items-center justify-center"
+                id="btn"
+                type="submit">
+                <img src="./assets/images/icon-arrow.svg" alt="Submit" />
+              </button>
+            </div>
+          </fieldset>
         </form>
         <div class="p-4 md:p-8">
           <p class="italic font-bold text-6xl lg:text-8xl">
